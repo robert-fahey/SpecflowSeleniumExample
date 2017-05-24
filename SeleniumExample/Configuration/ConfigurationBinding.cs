@@ -33,6 +33,7 @@ namespace SeleniumExample.Configuration
         public void InitializePageObjects()
         {
             _objectContainer.RegisterInstanceAs<HomePageObject>(new HomePageObject(_objectContainer.Resolve<IWebDriver>()));
+            _objectContainer.RegisterInstanceAs<SearchPage>(new SearchPage(_objectContainer.Resolve<IWebDriver>()));
         }
 
         [AfterScenario]

@@ -64,16 +64,20 @@ namespace SeleniumExample.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Foo")]
+        [NUnit.Framework.DescriptionAttribute("Search for a product type")]
         [NUnit.Framework.CategoryAttribute("Home")]
-        public virtual void Foo()
+        public virtual void SearchForAProductType()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Foo", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for a product type", new string[] {
                         "Home"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.Given("I search for shorts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I enter the search term shorts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ testRunner.When("I initiate the search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 7
+ testRunner.Then("the search term title displayed is Shorts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

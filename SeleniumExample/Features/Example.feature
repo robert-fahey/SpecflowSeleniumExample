@@ -1,5 +1,7 @@
 ﻿Feature: Example
 
 @Home
-Scenario: Foo
-	Given I search for shorts
+Scenario: Search for a product type
+	Given I enter the search term shorts
+	When I initiate the search
+	Then the search term title displayed is Shorts

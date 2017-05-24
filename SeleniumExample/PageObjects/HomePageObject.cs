@@ -26,16 +26,19 @@ namespace SeleniumExample.PageObjects
             _driver.Navigate().GoToUrl(_url);
         }
 
-        public void SearchByText(string searchTerm)
+        public void EnterSearchByText(string searchTerm)
         {
             var search =_driver.WaitForCondition(x => x.FindElement(_txtSearch));
 
             search.SendKeys(searchTerm);
+        }
 
+        public void InitiateSearch()
+        {
             var searchButton = _driver.WaitForCondition(x => x.FindElement(_btnSearch));
 
             searchButton.Click();
         }
-
+        
     }
 }
